@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>E-Hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-color: white;
+            color: #000000;
+            font-family: 'Avenir Next', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        img {
+            height: auto;
+            max-width: 80%;
+        }
+        
+        .button {
+            background-color: #000000;
+            border: 2px solid #000000;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0;
+            padding: 12px 32px 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        
+        .site-header {
+            background-color: white;
+            margin: 1%;
+        }
+        
+        nav a {
+            color: black;
+            display: inline-block;
+            margin: 0 3px;
+            text-decoration: none;
+        }
+        
+        nav a:first-child {
+            margin: 0 3px 0 0;
+        }
+        
+        main {
+            margin: 0%;
+        }
+        
+        .home-page {
+            display: grid;
+            font-size: 24px;
+            grid-template-columns: 50% 50%;
+            line-height: 1.4;
+            margin: 2em auto 0 auto;
+            max-width: 45em;
+            padding: 0;
+        }
+        
+        .home-page h1 {
+            font-size: 1em;
+            margin: 4em 0 0 0;
+        }
+        
+        .home-page .button {
+            margin: 1em 0;
+        }
+        
+        .site-padding {
+            padding: 1%;
+        }
+        
+        @media screen and (max-width: 45em) {
+            .home-page {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="navbar">
+    <a href="/">Nerchuko</a>
+    <a href="https://github.com/nandu19k">Github</a>
+    <a href="https://www.instagram.com/nerchu_ko/">Instagram</a>
+    <a href="https://www.youtube.com/channel/UCm4_rUfjicRxAlcnkXoOWzQ">Youtube</a>
+    <div class="dropdown">
+      <button class="dropbtn">Other Projects
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://sms-spam-ml.herokuapp.com/">SMS Spam Detector</a>
+        <a href="https://sentiment-analysis-nerchuko.herokuapp.com/">Sentiment Analysis</a>
+        
+      </div>
+    </div> 
+  </div> -->
+
+    <!-- <h2>
+        <a href='/'>
+            <p style="text-align:center;">Heart Disease Prediction</p>
+        </a>
+    </h2>
+
+    <h2>Results:</h2>-->
+
+    <!-- {% if prediction == 1%}
+    <h2 style="color:red;">Sorry to say, chances of having Heart disease is more, please consult a Doctor.</h2>
+    <p style="text-align:center;"><img src="https://www.heart.org/-/media/images/news/2019/july-2019/0725lifeexpectancy_sc.jpg" alt="HTML" width="450" height="350"></p>
+    {% elif prediction == 0%}
+    <h2 style="color:blue;">No Worries!!! You don't have Heart disease.</h2>
+    <p style="text-align:center;"></p><img src="https://www.becomingminimalist.com/wp-content/uploads/2019/09/how-to-be-happy.jpg" alt="HTML" width="350" height="250"></p> -->
+    <!-- {% endif %} -->
+
+
+    <div class="wrapper">
+        <header class="site-header">
+            <nav>
+                <a href="/" class="site-padding">Welcome</a>
+                <a href="https://en.wikipedia.org/wiki/Heart" class="site-padding">Info</a>
+                <a href="/index" class="site-padding">Home</a>
+                <a href="https://health.gov/myhealthfinder/topics/health-conditions/heart-health/keep-your-heart-healthy">For a Healthy Heart</a>
+                <a href="https://www.linkedin.com/in/jyotheendra-doddala-ab24a61b5/" class="site-padding">Contact</a>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="home-page">
+                <div class="block">
+                    <h1>Heart Condition Checker</h1>
+
+                    {% if prediction == 1%}
+                    <h2 style="color:red;">Sorry to say, you have higher chances of having a unhealthy heart, But dont worry u can follow the below steps and also make sure you consult your nearest doctor</h2>
+                    <p style="text-align:center;"><img src="https://www.maxbupa.com/content/dam/maxbupa/Image/Livewell/Steps%20to%20maintain%20healthy%20heart%20for%20all%20ages.jpg" alt="HTML" width="450" height="350"></p>
+                    {% elif prediction == 0%}
+                    <h2 style="color:blue;">Hooray!! You have a healthy heart, Please make sure you keep it this way forever</h2>
+                    <p style="text-align:center;"></p><img src="https://www.maxbupa.com/content/dam/maxbupa/Image/Livewell/Steps%20to%20maintain%20healthy%20heart%20for%20all%20ages.jpg" alt="HTML" width="350" height="250"></p>
+                    {% endif %}
+
+                    <a href="https://www.healthline.com/health/healthy-heart-tips" class="button">Tips For Healthy Heart</a>
+
+                </div>
+
+                <!-- </div>
+
+                <div class="block">
+                    <img src="https://image.freepik.com/free-vector/doctor-nurse-portrait_7737-1769.jpg" alt="An illustration of me in profile">
+                </div> -->
+
+        </main>
+
+        </div>
+
+
+
+</body>
+
+</html>

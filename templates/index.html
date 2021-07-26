@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <title>Document</title> -->
+    <style>
+        body {
+            font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+            background: #3AAFAB;
+            color: #fff;
+            padding: 50px 0;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 5%;
+            margin-left: 12%;
+            display: inline;
+        }
+        
+        .container * {
+            box-sizing: border-box;
+        }
+        
+        .flex-outer,
+        .flex-inner {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .flex-outer {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .flex-outer li,
+        .flex-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .flex-inner {
+            padding: 0 8px;
+            justify-content: space-between;
+        }
+        
+        .flex-outer>li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        
+        .flex-outer li label,
+        .flex-outer li p {
+            padding: 8px;
+            font-weight: 300;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+        }
+        
+        .flex-outer>li>label,
+        .flex-outer li p {
+            flex: 1 0 120px;
+            max-width: 220px;
+        }
+        
+        .flex-outer>li>label+*,
+        .flex-inner {
+            flex: 1 0 220px;
+        }
+        
+        .flex-outer li p {
+            margin: 0;
+        }
+        
+        .flex-outer li input:not([type='checkbox']),
+        .flex-outer li textarea {
+            padding: 15px;
+            border: none;
+        }
+        
+        .flex-outer li button {
+            margin-left: auto;
+            padding: 8px 16px;
+            border: none;
+            background: #333;
+            color: #f2f2f2;
+            text-transform: uppercase;
+            letter-spacing: .09em;
+            border-radius: 2px;
+        }
+        
+        .flex-inner li {
+            width: 100px;
+        }
+        
+        .site-header {
+            background-color: #3AAFAB;
+            margin: 0.5%;
+        }
+        
+        nav a {
+            color: white;
+            display: inline-block;
+            margin: 0 3px;
+            text-decoration: none;
+        }
+        
+        nav a:first-child {
+            margin: 0 3px 0 0;
+        }
+        
+        .site-padding {
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="/" class="site-padding">Welcome</a>
+            <a href="https://en.wikipedia.org/wiki/Heart" class="site-padding">Info</a>
+            <a href="/index" class="site-padding">Home</a>
+            <a href="https://health.gov/myhealthfinder/topics/health-conditions/heart-health/keep-your-heart-healthy">For a Healthy Heart</a>
+            <a href="https://www.linkedin.com/in/jyotheendra-doddala-ab24a61b5/" class="site-padding">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="container">
+            <form action="/predict" method="post">
+                <ul class="flex-outer">
+                    <li>
+                        <label for="first-name">Chest Pain type</label>
+                        <input type="text" name="chest pain type (4 values)" placeholder="Enter between values 0/1/2/3" required="required" />
+                    </li>
+                    <li>
+                        <label for="first-name">Resting BP</label>
+                        <input type="text" name="resting blood pressure" placeholder="Enter your resting blood pressure" required="required" />
+                    </li>
+                    <li>
+                        <label for="first-name">Serum Cholestoral</label>
+                        <input type="text" name="serum cholesterol in mg/dl" placeholder="Enter value in mg/dl" required="required" />
+                    </li>
+                    <li>
+                        <label for="first-name">Fasting Blood Suagr</label>
+                        <input type="text" name="fasting blood sugar > 120 mg/dl" placeholder="Enter your fasting blood sugar in mg/dl" required="required" />
+                    </li>
+                    <li>
+                        <label for="first-name">Resting ECG</label>
+                        <input type="text" name="resting electrocardiography results (values 0,1,2)" placeholder="Enter your electrocardiographic results values between  0/1/2" required="required" />
+                    </li>
+                    <li>
+                        <label for="first-name">Max Heart Rate</label>
+                        <input type="text" name="maximum heart rate achieved" placeholder="Enter your maximum heart rate achieved" required="required" />
+                    </li>
+                    <li>
+                        <label for="first-name">Induced Anigma</label>
+                        <input type="text" name="exercise induced angina" placeholder="Enter your exercise induced angina" required="required" />
+                    </li>
+                    <li>
+                        <button type="submit" class="registerbtn">Predict</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
